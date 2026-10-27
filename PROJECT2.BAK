@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<conio.h>
+int main(){
+int pin=1234;
+int enteredpin;
+int ch;
+int bal=5000;
+int amt;
+clrscr();
+printf("=========================Welcome to ATM=============================");
+printf("\nEnter your pin:");
+scanf("%d",&enteredpin);
+if(enteredpin!=pin){
+printf("Invalid PIN");
+}
+else{
+printf("\nPIN is Correct");
+do{
+printf("\n====================ATM Menu==============================");
+printf("\n1.deposit\t2.withdraw\n3.Balance Enquiry\t4.Exit");
+printf("\nEnter your Choice:");
+scanf("%d",&ch);
+switch(ch){
+ case 1:
+    printf("Enter Your Deposit Amount:");
+    scanf("%d",&amt);
+    bal+=amt;
+    printf("Balance:%d",bal);
+    break;
+ case 2:
+    printf("Enter Your Withdraw Amount:");
+    scanf("%d",&amt);
+    if(amt<bal){
+    bal-=amt;
+    printf("Available Balance:%d",bal);
+    }
+    else{
+    printf("Balance is Insufficient");
+   }
+   break;
+ case 3:
+    printf("Available Balance:%d",bal);
+    break;
+ case 4:
+    printf("Thank you visit Again!");
+    break;
+ default:
+    printf("Invalid Choice");
+ }
+}while(ch<4);
+}
+ getch();
+ return 0;
+}
