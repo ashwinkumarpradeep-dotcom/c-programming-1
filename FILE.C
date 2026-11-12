@@ -23,7 +23,7 @@ if(fp==NULL)
   {
   printf("error");
   }
-  fprintf(fp,"thalapathy is one of the dancer");
+  fprintf(fp,"program trainers charcter was good sir explains the concept clearly his teachng method is easy to undrestand he teaches step by step he explains program with example");
   fclose(fp);
   fp=NULL;
   return 0;
